@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#showButton').click(function() {
+                $('#myDiv').show(); // Shows the element
+            });
+        });
+        $(document).ready(function(){
+            $("#fadeInBtn").click(function(){
+                $("#p1").fadeIn();
+                $("#p2").fadeIn("slow");
+                $("#p3").fadeIn(3000);
+            });
+        });
+        $(document).ready(function(){
+            $("#fadeOutBtn").click(function(){
+                $("#p4").fadeOut();
+                $("#p5").fadeOut("slow");
+                $("#p6").fadeOut(3000);
+            });
+        });
+        $(document).ready(function(){
+            $("#slideDownButton").click(function(){
+                $("#slideDownContent").slideDown("slow");
+            });
+        });
+        $(document).ready(function(){
+            $("#slideUpButton").click(function(){
+            $   ("#slideUpContent").slideUp();
+            });
+        });
+    </script>
+    <style> 
+        #slideDownButton, #slideDownContent {
+          padding: 5px;
+          text-align: center;
+          background-color: hsl(77, 49%, 52%);
+          border: solid 1px #e27272;
+        }
+        
+        #slideDownContent {
+          padding: 50px;
+          display: none;
+        }
+        #slideUpButton, #slideUpContent {
+          padding: 5px;
+          text-align: center;
+          background-color: hsl(77, 49%, 52%);
+          border: solid 1px #e27272;
+        }
+        
+        #slideUpContent {
+          padding: 50px;
+        }
+    </style>        
+</head>
+<body>
+    <div id="myDiv" style="display: none;">This is a div.</div>
+    <button id="showButton">Show</button>
+    <button id="fadeInBtn">click to fade in</button>
+    <div id="p1" style="display: none;">hello</div>
+    <div id="p2" style="display: none;">world</div>
+    <div id="p3" style="display: none;">hi</div>
+    <button id="fadeOutBtn">click to fade out</button>
+    <div id="p4">hello</div>
+    <div id="p5">world</div>
+    <div id="p6">hi</div>
+    <div id="slideDownButton">Click to slide down</div>
+    <div id="slideDownContent">Hello world!</div>
+    <div id="slideUpButton">Click to slide up</div>
+    <div id="slideUpContent">Hello world!</div>
+
+</body>
+</html>

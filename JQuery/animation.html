@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #animateContent {
+            width: 100px; /* Set a width to make the animation visible */
+            height: 50px; /* Set a height to make the animation visible */
+            background-color: lightblue; /* Optional: to highlight the element */
+            text-align: center; /* Center text */
+            line-height: 50px; /* Center text vertically */
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#animateButton").click(function() {
+                $("#animateContent").animate({ left: '400px' }, 1000); // Added duration for smooth animation
+            });
+        });
+        $(document).ready(function(){
+            $("button").click(function(){
+                var div = $("#another");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({width: '300px', opacity: '0.8'}, "slow");
+                div.animate({height: '100px', opacity: '0.4'}, "slow");
+                $("#another").stop();
+                div.animate({width: '100px', opacity: '0.8'}, "slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="animateButton">Click to Animate</button>
+    <div id="animateContent" style="position: relative;">Hi Hello</div>
+    <div id="another" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+</body>
+</html>

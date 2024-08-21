@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#single").click(function(){
+            $(this).hide();
+            });
+        });
+        $(document).ready(function(){
+        $("#double").dblclick(function(){
+                $(this).hide();
+            });
+        });
+        $(document).ready(function(){
+        $("#p1").mouseenter(function(){
+            alert("Don't touch me!");
+        });
+        });
+        $(document).ready(function(){
+        $("#p2").hover(function(){
+            alert("You entered p1!");
+        },
+        function(){
+            alert("Bye! You now leave p1!");
+        }); 
+        });
+        $(document).ready(function(){
+            $("#p3").bind("click",function(){
+                $(this).hide();
+            });
+            $("button").click(function(){
+                $("#p3").unbind();
+            });
+            });
+            $(document).ready(function(){
+                $("div").delegate("p", "click",function(){
+                    $("#p4").css("background-color", "pink");
+                });
+            });
+    </script>
+</head>
+    <body>
+        <p id="single">Click me away!</p>
+        <p id="double">double clik me away!</p>
+        <p id="p1">heloo</p>
+        <p id="p2">touch me to see how hover works</p>
+        <p id="p3">bind me</p>
+        <button>unbind me</button>
+        <div style="background-color:yellow;">
+            <p id="p4">This is a paragraph inside a div element.</p>
+        </div>
+    </body>
+</html>

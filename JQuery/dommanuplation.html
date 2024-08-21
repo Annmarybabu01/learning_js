@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#p1").remove();
+        });
+    $(document).ready(function() {
+      $("#text").click(function(){
+         alert($("p").text());// to get text content
+      });
+      $("#html").click(function(){
+         alert($("p").html());//to get html content
+      });
+    });
+    $(document).ready(function() {
+      $("#text1").click(function(){
+         $("p").text("hello<b>hyy</b>");
+      });
+      $("#html1").click(function(){
+         $("p").html("hello<b>hyy</b>");
+      });
+   });
+   $(document).ready(function() {
+      $("button").click(function(){
+         $("<p>Zara</p>").appendTo(".inner");
+      });
+   });
+   $(document).ready(function() {
+        $('input[name="unserName"]').css('border', '2px solid green'); // Targets <input> where 'name' is not 'username'
+    });
+    </script>
+</head>
+    <body>
+       <p id="p1">Hello Sweden!</p>
+       <p>hello<b>hyy</b></p>
+       <button id="text">Get Text</button>
+       <button id="html">Get HTML</button>
+       <button id="text1">set Text</button>
+       <button id="html1">set HTML</button>
+       <div class="inner">Hello</div>
+       <div class="inner">Goodbye</div>
+       <form>
+            <input type="text" name="unserName">
+       </form>
+    </body>
+</html>
